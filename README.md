@@ -41,22 +41,6 @@ Observation:
 Pollution spikes are concentrated in specific geographic zones and high-density areas.
 
 
-### Forecasting with Multiple Models
-
-* [x] ARIMA
-* [x] Prophet
-* [x] XGBoost (lag-based ML model)
-* [x] Model comparison using MAE and RMSE
-* [x] Ensemble model (weighted average)
-
-Result:
-The ensemble model improved predictive accuracy compared to individual models.
-
-Final Results:
-MAE: [Insert value]
-RMSE: [Insert value]
-
-
 ### Climate Analysis
 
 * [x] Monthly aggregation
@@ -66,7 +50,6 @@ RMSE: [Insert value]
 Observation:
 Long-term temperature trends vary significantly by latitude and region.
 
----
 
 ### Environmental Impact Analysis
 
@@ -79,7 +62,6 @@ Key Findings:
 * Higher temperatures increase ozone levels.
 * Humidity impacts pollution dispersion.
 
----
 
 ### Feature Importance
 
@@ -88,12 +70,6 @@ Key Findings:
 * [x] Permutation importance
 * [x] Cross-method comparison
 
-Observation:
-Latitude and UV index consistently rank as the most important predictors of temperature.
-Pressure and humidity contribute moderately.
-Wind and precipitation have lower predictive influence.
-
----
 
 ### Spatial Analysis
 
@@ -101,8 +77,19 @@ Wind and precipitation have lower predictive influence.
 * [x] Country-level aggregation
 * [x] Pollution distribution mapping
 
-Observation:
-Clear geographic clustering of pollution and temperature patterns is visible across continents.
+### Forecasting with Multiple Models
+
+* [x] ARIMA
+* [x] Prophet
+* [x] XGBoost (lag-based ML model)
+* [x] Model comparison using MAE and RMSE
+* [x] Ensemble model (weighted average)
+
+Result: Prophet model provided the best results
+
+Final Results:
+MAE: 0.732
+RMSE: 1.283
 
 ---
 
@@ -112,13 +99,13 @@ Python
 Pandas
 NumPy
 Matplotlib / Seaborn
-Statsmodels (ARIMA)
+Statsmodels (ARIMA, SARIMA)
 Prophet
 XGBoost
 Scikit-learn
-SHAP
 
----
+
+
 
 # Key Takeaways
 
@@ -128,27 +115,11 @@ SHAP
 * Weather parameters strongly influence air quality trends.
 * Spatial analysis reveals clear environmental pattern clustering.
 
----
+
 
 # How to Run
 
 1. Install dependencies from `requirements.txt`
-2. Run notebooks in order:
+2. Run cells in order
 
-   * Data Cleaning
-   * EDA
-   * Forecasting
-   * Advanced Analysis
 
----
-
-# Repository Link
-
-[Insert GitHub link here]
-
----
-
-If you would like, I can also:
-
-* Make a slightly more executive-facing version (for recruiters)
-* Or compress this to a 1-page portfolio summary version for quick review
